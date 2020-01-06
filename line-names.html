@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lines names</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: [start] 1fr [second] 1fr [third] 1fr [end-first] 1fr [fifth] 1fr [end-second] 1fr [seven] 1fr [end];
+            grid-template-rows: [start] 200px [middle] 200px [end];
+            height: 100vh;
+            grid-gap: 5px;
+        }
+        .item {
+            background-color: #f5f5f5;
+            border: 1px solid #d1d1d1;
+            padding: 10px;
+        }
+        .item:nth-of-type(1){
+            grid-row: start / end;
+            grid-column: start / end-first;
+        }
+        .item:nth-of-type(2){
+            grid-row: start / end;
+            grid-column: end-first / end-second;
+        }
+        .item:nth-of-type(3){
+            grid-column: end-second / end;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="container">
+        <div class="item">Item #1</div>
+        <div class="item">Item #2</div>
+        <div class="item">Item #3</div>
+        <div class="item">Item #4</div>
+        <div class="item">Item #5</div>
+    </section>
+
+</body>
+</html>

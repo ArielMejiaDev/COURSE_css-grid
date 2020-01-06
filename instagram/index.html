@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instagram</title>
+
+    <style>
+    
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .post-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(100px, 293px));
+            justify-content: center;
+            grid-gap: 28px;
+        }
+        .post {
+            cursor: pointer;
+            position: relative;
+            /* because is not a div so it does not have block by default it is an anchor so it is inline by default so I need to change it to block */
+            display: block;
+        }
+        .post-image {
+            margin: 0;
+        }
+        .post-image img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .post-overlay {
+            background-color: rgba(0, 0, 0, .4);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .post:hover .post-overlay {
+            display: flex;
+        }
+        .post-likes,
+        .post-comments {
+            font-weight: bold;
+            width: 80px;
+            display: inline-block;
+            text-align: center;
+            margin: 5px;
+        }
+
+        /* Responsive desktop first */
+        @media screen and (max-width: 768px) {
+            .post-list {
+                grid-gap: 3px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <section class="post-list">
+        
+        <a href="" class="post">
+
+            <figure class="post-image">
+                <img src="./src/images/pc.jpg" alt="pc">
+            </figure>
+
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">62</span>
+                    <span class="post-comments">17</span>
+                </p>
+            </span>
+
+        </a>
+        
+        <a href="" class="post">
+
+            <figure class="post-image">
+                <img src="./src/images/pc-2.jpg" alt="pc">
+            </figure>
+
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">45</span>
+                    <span class="post-comments">20</span>
+                </p>
+            </span>
+
+        </a>
+        
+        <a href="" class="post">
+
+            <figure class="post-image">
+                <img src="./src/images/pc-3.jpg" alt="pc">
+            </figure>
+
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">15</span>
+                    <span class="post-comments">14</span>
+                </p>
+            </span>
+
+        </a>
+        
+        <a href="" class="post">
+
+            <figure class="post-image">
+                <img src="./src/images/pc.jpg" alt="pc">
+            </figure>
+
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">94</span>
+                    <span class="post-comments">18</span>
+                </p>
+            </span>
+
+        </a>
+        
+        <a href="" class="post">
+
+            <figure class="post-image">
+                <img src="./src/images/pc-2.jpg" alt="pc">
+            </figure>
+
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">40</span>
+                    <span class="post-comments">12</span>
+                </p>
+            </span>
+
+        </a>
+        
+        <a href="" class="post">
+
+            <figure class="post-image">
+                <img src="./src/images/pc-3.jpg" alt="pc">
+            </figure>
+
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">70</span>
+                    <span class="post-comments">15</span>
+                </p>
+            </span>
+
+        </a>
+
+    </section>
+
+</body>
+</html>
